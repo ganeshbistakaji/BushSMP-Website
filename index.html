@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- SEO RELATED -->
+    <link rel="canonical" href="https://bushsmp.net" />
+    <meta
+      name="keywords"
+      content="BushSMP, cracked Minecraft server, Java and Bedrock Minecraft SMP, cross-platform Minecraft server, Minecraft 1.20.4+ server, offline Minecraft server, premium Minecraft SMP, Minecraft player economy, player shops Minecraft, land claim Minecraft SMP, Minecraft griefing allowed, Minecraft PvP SMP, Minecraft looting and scamming server, Minecraft clans and nations, semi-anarchy Minecraft server, survival multiplayer Minecraft server"
+    />
+    <meta
+      name="description"
+      content="Join BushSMP – a crossplay Minecraft SMP server for Java, Bedrock, premium & cracked players. Build, trade, raid, or rule. You decide!"
+    />
+
+    <!-- Allow indexing and following links -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- For Googlebot specifically -->
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="<?= $config['Website_Info']['Website_Short_Title']; ?> | Home"
+    />
+    <meta
+      property="og:description"
+      content="Join BushSMP – a crossplay Minecraft SMP server for Java, Bedrock, premium & cracked players. Build, trade, raid, or rule. You decide!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bushsmp.net" />
+    <meta property="og:image" content="./assets/banner/openGraph.png" />
+    <meta
+      property="og:site_name"
+      content="BushSMP | You want drama? It'll be a battlefield"
+    />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="BushSMP | You want drama? It'll be a battlefield"
+    />
+    <meta
+      name="twitter:description"
+      content="Join BushSMP – a crossplay Minecraft SMP server for Java, Bedrock, premium & cracked players. Build, trade, raid, or rule. You decide!"
+    />
+    <meta name="twitter:image" content="./assets/banner/twitterImage.png" />
+    <meta name="twitter:site" content="@bushsmp" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "BushSMP | You want drama? It'll be a battlefield | Home",
+        "url": "https://bushsmp.net"
+      }
+    </script>
+
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <title>BushSMP | You want drama? It'll be a battlefield</title>
+  </head>
+  <body>
+    <div class="popUp">
+      <div class="popUpInner">
+        <div class="popUp__content">
+          <div class="cancel">
+            <img
+              src=""
+              alt="Close pop up"
+              class="closePopUp"
+              role="button"
+              tabindex="0"
+              aria-label="Close pop up"
+              onclick="closePopUp();"
+            />
+          </div>
+          <h1 class="title">Select your platform!</h1>
+          <div class="buttons">
+            <button
+              class="but java"
+              type="button"
+              onclick="popUpClicked('java');"
+              aria-label="Connect using Minecraft java edition"
+            >
+              Java
+            </button>
+
+            <button
+              class="but bedrock"
+              type="button"
+              onclick="popUpClicked('mcbe');"
+              aria-label="Connect using Minecraft bedrock edition"
+            >
+              Bedrock
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mainBox">
+      <header role="banner" class="header" style="z-index: 5">
+        <!-- Skip to content for screen readers -->
+        <a href="#main" class="sr-only sr-only-focusable"
+          >Skip to main content</a
+        >
+
+        <!-- PC NAV -->
+        <div class="navPc" role="navigation" aria-label="Primary Navigation">
+          <div class="left">
+            <a href="#home" class="navImage" aria-label="Go to homepage">
+              <img
+                src="./assets/logo/nav.png"
+                alt="BushSMP Logo"
+                loading="lazy"
+              />
+            </a>
+          </div>
+
+          <div class="right">
+            <ul class="navList">
+              <li class="navLink">
+                <a class="link" href="#home">Home</a>
+              </li>
+              <li class="navLink">
+                <a class="link" href="#about">About</a>
+              </li>
+              <li class="navLink">
+                <a class="link" href="./donate.html">Donate</a>
+              </li>
+              <li class="navLink">
+                <p
+                  class="link connectPopUp"
+                  type="button"
+                  aria-label="Open connect popup"
+                  onclick="openPopUp();"
+                >
+                  Connect
+                </p>
+              </li>
+              <li class="navLink">
+                <a
+                  class="link"
+                  href="https://discord.com/invite/j5x7uZASSp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Discord</a
+                >
+              </li>
+              <li class="navLink">
+                <img
+                  src=""
+                  alt="Toggle Theme"
+                  class="link themeToggle"
+                  role="button"
+                  tabindex="0"
+                  aria-label="Toggle Theme"
+                />
+              </li>
+              <li class="navLink">
+                <button
+                  onclick="window.open('https://wiki.bushsmp.net', '_blank');"
+                  class="wikiButton"
+                  type="button"
+                  aria-label="Open Wiki"
+                >
+                  Wiki
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- MOBILE NAV -->
+        <div class="navMb" role="navigation" aria-label="Mobile Navigation">
+          <div class="top">
+            <div class="left">
+              <a href="#home" class="navImage" aria-label="Go to homepage">
+                <img
+                  src="./assets/logo/nav.png"
+                  alt="BushSMP Logo"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
+            <div class="right">
+              <ul class="navList">
+                <li class="navLink">
+                  <button
+                    onclick="window.open('https://wiki.bushsmp.net', '_blank');"
+                    class="wikiButton"
+                    type="button"
+                    aria-label="Open Wiki"
+                  >
+                    Wiki
+                  </button>
+                </li>
+                <li class="navLink">
+                  <img
+                    src=""
+                    alt="Toggle Theme"
+                    class="link themeToggle"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Toggle Theme"
+                  />
+                </li>
+                <li class="navLink">
+                  <img
+                    src=""
+                    alt="Open navigation menu"
+                    class="link hamburger menu-closed"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Open navigation menu"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bottom">
+            <ul class="navList">
+              <li class="navLink">
+                <a class="link" href="#home">Home</a>
+              </li>
+              <li class="navLink">
+                <a class="link" href="#about">About</a>
+              </li>
+              <li class="navLink">
+                <a class="link" href="./donate.html">Donate</a>
+              </li>
+              <li class="navLink">
+                <p
+                  class="link"
+                  onclick="openPopUp();"
+                  type="button"
+                  aria-label="Open connect popup"
+                >
+                  Connect
+                </p>
+              </li>
+              <li class="navLink">
+                <a
+                  class="link"
+                  href="https://discord.com/invite/j5x7uZASSp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Discord</a
+                >
+              </li>
+              <li class="navLink wikiNavSmall">
+                <button
+                  onclick="window.open('https://wiki.bushsmp.net', '_blank');"
+                  class="wikiButton"
+                  type="button"
+                  aria-label="Open Wiki"
+                >
+                  Wiki
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- HERO SECTION -->
+      <section
+        class="heroSection"
+        id="home"
+        role="region"
+        aria-labelledby="hero-title"
+      >
+        <div class="heroWrapper">
+          <div class="heroInner">
+            <img
+              src="./assets/banner/hero.png"
+              alt="Minecraft landscape background"
+              class="heroImage"
+              loading="eager"
+              draggable="false"
+              aria-hidden="true"
+            />
+
+            <div class="blackOverlay" aria-hidden="true"></div>
+
+            <div class="innerContent">
+              <img
+                src="./assets/logo/logo.png"
+                alt="BushSMP logo"
+                class="logo"
+                loading="eager"
+                draggable="false"
+              />
+
+              <h1 class="title" id="hero-title">
+                You want drama? It'll be a battlefield
+              </h1>
+
+              <div class="buttons">
+                <button
+                  class="but discord"
+                  type="button"
+                  onclick="window.open('https://discord.com/invite/j5x7uZASSp', '_blank');"
+                  aria-label="Join our Discord server (opens in new tab)"
+                >
+                  Discord
+                </button>
+
+                <button
+                  class="but connect"
+                  type="button"
+                  onclick="openPopUp();"
+                  aria-label="Open connect popup"
+                >
+                  Connect
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="featuresPc" role="region">
+        <div class="featuresWrapper">
+          <ul class="featuresInner" aria-label="Features list">
+            <li class="title">Bedrock Edition X Java Edition</li>
+            <li class="seperator" aria-hidden="true"></li>
+            <li class="title">Cracked X Premium</li>
+            <li class="seperator" aria-hidden="true"></li>
+            <li class="title">24/7</li>
+            <li class="seperator" aria-hidden="true"></li>
+            <li class="title">Asia Region</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="featuresMb" role="region">
+        <div class="featuresWrapper">
+          <ul class="featuresInner" aria-label="Features list">
+            <li class="title">Bedrock Edition X Java Edition</li>
+            <li class="seperator" aria-hidden="true"></li>
+            <li class="title">Cracked X Premium</li>
+            <li class="seperator" aria-hidden="true"></li>
+            <li class="title">24/7</li>
+            <li class="seperator" aria-hidden="true"></li>
+            <li class="title">Asia Region</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Play With Friends -->
+      <section class="pwf" role="region" aria-labelledby="connect-title">
+        <div class="pwfWrapper">
+          <div class="pwfInner">
+            <!-- Desktop Text Box -->
+            <div class="textBoxPc" aria-hidden="false">
+              <h2 class="title">
+                <span class="normalColor">CONNECT WITH</span><br />
+                <span class="primColor">FRIENDS</span>
+              </h2>
+              <p class="desc">
+                Find people who match<br />
+                your vibe and play
+              </p>
+            </div>
+
+            <!-- Mobile Text Box -->
+            <div class="textBoxMb" aria-hidden="true">
+              <h2 class="title">
+                <span class="normalColor">CONNECT WITH</span>
+                <span class="primColor">FRIENDS</span>
+              </h2>
+              <p class="desc">Find people who match your vibe and play</p>
+            </div>
+
+            <!-- Player Skins -->
+            <div class="playerImages" aria-label="Minecraft player avatars">
+              <img
+                src="./assets/skin/player1.png"
+                alt="Minecraft player skin 1"
+                class="image img1"
+                loading="lazy"
+                draggable="false"
+              />
+              <img
+                src="./assets/skin/player2.png"
+                alt="Minecraft player skin 2"
+                class="image img2"
+                loading="lazy"
+                draggable="false"
+              />
+              <img
+                src="./assets/skin/player3.png"
+                alt="Minecraft player skin 3"
+                class="image img3"
+                loading="lazy"
+                draggable="false"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section
+        class="about"
+        id="about"
+        role="region"
+        aria-labelledby="about-title"
+      >
+        <div class="aboutWrapper">
+          <div class="aboutInner">
+            <h2 class="title">
+              <span class="normalColor">WHY</span><br /><span class="primColor"
+                >BUSHSMP</span
+              >
+            </h2>
+
+            <p class="desc">
+              At <span class="bold">BushSMP</span>, we support both
+              <span class="bold">Java Edition</span> and
+              <span class="bold">Bedrock Edition</span> players. Don’t own
+              Minecraft? No worries! BushSMP is a
+              <span class="bold">cracked</span> Minecraft server that welcomes
+              both <span class="bold">offline</span> and
+              <span class="bold">premium</span> players, compatible with
+              versions 1.20.4 and above.<br /><br />BushSMP features a
+              <span class="bold">player-driven economy</span> with player shops,
+              unlike traditional central economies. Every action by players
+              influences the in-game market, making the economy dynamic and
+              community-driven.<br /><br />For
+              <span class="bold">passive players</span>, we offer a generous
+              100x100 land claim area to build your base peacefully. For those
+              seeking a more intense survival experience, you can form teams,
+              clans, or full-fledged nations. BushSMP is a
+              <span class="bold">semi-anarchy</span> Minecraft server, where we
+              allow <span class="bold">PvP</span>,
+              <span class="bold">griefing</span> bases,
+              <span class="bold">looting</span>, and even
+              <span class="bold">scamming</span> within the game. The choice is
+              yours — build or betray.<br /><br />So come join BushSMP, one of
+              the best <span class="bold">cross-platform</span> Minecraft SMP
+              servers, and let us serve you an unforgettable survival
+              experience.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer" role="contentinfo">
+        <div class="footerWrapper">
+          <div class="footerInner">
+            <ul class="linkList" aria-labelledby="quick-links-title">
+              <li class="link title" id="quick-links-title">QUICK LINKS</li>
+              <li class="link desc"><a href="#home">Home</a></li>
+              <li class="link desc"><a href="#about">About</a></li>
+              <li class="link desc"><a href="./donate.html">Donate</a></li>
+              <li class="link desc">
+                <p
+                  class="connectPopUp"
+                  type="button"
+                  aria-label="Open connect popup"
+                  onclick="openPopUp();"
+                >
+                  Connect
+              </p>
+              </li>
+              <li class="link desc">
+                <a
+                  class="link"
+                  href="https://discord.com/invite/j5x7uZASSp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Discord</a
+                >
+              </li>
+            </ul>
+
+            <ul class="linkList" aria-labelledby="other-links-title">
+              <li class="link title" id="other-links-title">OTHER LINKS</li>
+              <li class="link desc">
+                <a href="https://wiki.bushsmp.net">Wiki</a>
+              </li>
+              <li class="link desc">
+                <a href="https://youtube.com/@bushsmp">Youtube</a>
+              </li>
+              <li class="link desc">
+                <a href="https://x.com/bushsmp">Twitter</a>
+              </li>
+              <li class="link desc">
+                <a href="https://instagram.com/bushsmp">Instagram</a>
+              </li>
+            </ul>
+
+            <ul class="linkList" aria-labelledby="ip-address-title">
+              <li class="link title" id="ip-address-title">IP ADDRESS</li>
+              <li class="link desc">bushsmp.net</li>
+            </ul>
+
+            <ul class="linkList" aria-labelledby="port-title">
+              <li class="link title" id="port-title">PORT</li>
+              <li class="link desc">27281</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./script/main.js"></script>
+  </body>
+</html>
