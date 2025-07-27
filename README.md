@@ -1,6 +1,6 @@
 # BushSMP-Website
 
-Website for my minecraft server called BushSMP
+Website for my minecraft server called BushSMP. [Live Page](https://bushsmp.net)
 
 
 # Code Reuse
