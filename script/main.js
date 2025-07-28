@@ -74,16 +74,24 @@ function closePopUp() {
 }
 
 function popUpClicked(platform) {
-  if (platform == "mcbe") {
-    const isWindows = navigator.userAgent.includes("Windows");
+  if (platform === "mcbe") {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isMobile = /android|iphone|ipad|ipod/.test(userAgent);
+    const isWindows = /windows/.test(userAgent);
 
-    if (isWindows) {
-      // Open Minecraft Bedrock on Windows
-      window.location.href =
-        "minecraft://?addExternalServer=BushSMP|bushsmp.net:27281";
+    if (isMobile || isWindows) {
+      // Directly open Minecraft PE/Bedrock
+      window.location.href ="minecraft://?addExternalServer=BushSMP|bushsmp.net:27281";
+
+      // Optional fallback if nothing happens after 3 seconds
+      setTimeout(() => {
+        navigator.clipboard.writeText(serverIP).then(() => {
+          alert("Minecraft didn't open, the IP was copied instead.");
+        });
+      }, 5000);
     } else {
-      // Fallback: Copy to clipboard
-      navigator.clipboard.writeText("bushsmp.net:27281").then(() => {
+      // Fallback for unsupported platforms
+      navigator.clipboard.writeText(serverIP).then(() => {
         alert("Ip copied!");
       });
     }
