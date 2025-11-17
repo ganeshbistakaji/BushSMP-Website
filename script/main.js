@@ -81,7 +81,7 @@ function popUpClicked(platform) {
 
     if (isMobile || isWindows) {
       // Directly open Minecraft PE/Bedrock
-      window.location.href ="minecraft://?addExternalServer=BushSMP|bushsmp.net:27281";
+      window.location.href ="minecraft://?addExternalServer=BushSMP|mcbe.bushsmp.com:27281";
 
       // Optional fallback if nothing happens after 3 seconds
       setTimeout(() => {
@@ -98,8 +98,9 @@ function popUpClicked(platform) {
   }
 
   if (platform == "java") {
-    navigator.clipboard.writeText("bushsmp.net").then(() => {
+    navigator.clipboard.writeText("mc.bushsmp.net:27281").then(() => {
       alert("Ip copied!");
     });
   }
 }
+
